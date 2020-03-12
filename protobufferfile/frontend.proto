@@ -1,0 +1,26 @@
+/*
+
+This file defines the communication protocol for exchange of information between the edge nodes. The main thing that the 
+edge nodes exchange is the metadata about the IoT resource availability. Accordingly, a service is defined.
+
+Author : Niket Agrawal
+
+*/
+
+syntax = "proto3";
+
+service Frontend{
+
+  rpc ResourceTableUpdate(TableUpdate) returns (TableUpdateACK) {}
+
+}
+
+message TableUpdate{
+  string resource = 1;
+  string ID = 2;
+
+}
+
+message TableUpdateACK{
+  string ack = 3;
+}

@@ -1,0 +1,17 @@
+{
+  "IoTResources": [
+    {
+      "Resource": "IoT_resource_1",
+      "NodeID": "node.labels.device==edge_node_1"
+    },
+    {
+      "Resource": "IoT_resource_2",
+      "NodeID": "node.labels.device==edge_node_2"
+    },
+    {
+      "Resource": "IoT_resource_3",
+      "NodeID": "node.labels.device==edge_node_3"
+    }
+  ]
+ }
+ 
