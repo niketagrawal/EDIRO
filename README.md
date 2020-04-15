@@ -59,5 +59,3 @@ Use the below commands to compile the above changes and create an executable bin
 
 - `go build`
 - `go install <path to EDIRO directory>`
-
-For questions or clarifications regarding the above procedure, please drop an email to niketagrawal8@gmail.com 
