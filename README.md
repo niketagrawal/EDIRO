@@ -5,7 +5,20 @@ EDIRO is an Edge-driven IoT Resource-aware Orchestration Framework for Edge Comp
 
 ## Overview
 
-EDIRO is specifically designed for utilization in IoT use cases characterized by client requests that request on-demand services from the edge infrastructure. The target use case dealt with in this regard is that of connected vehicles, where mobile clients, i.e., vehicles, demand  provisioning of ephemeral workloads on the edge servers. These workloads require an input or an ‘IoT resource’ to execute upon and render the desired results. EDIRO facilitates collaborative processing by enabling the network of edge nodes to source these IoT resources from other clients in the vicinity that may contribute them. In a typical connected vehicles scenario, a vehicle’s query about the condition of the road ahead of it is serviced by executing a workload on the nearby edge compute node installed on a traffic light that utilizes the input, i.e., high definition (HD) maps and sensor data offloaded on it by other vehicles in the vicinity.     
+EDIRO is specifically designed for utilization in IoT use cases characterized by client requests that request on-demand services from the edge infrastructure. The target use case dealt with in this regard is that of connected vehicles, where mobile clients, i.e., vehicles, demand  provisioning of ephemeral workloads on the edge servers. These workloads require an input or an 'IoT resource' to execute upon and render the desired results. EDIRO facilitates collaborative processing by enabling the network of edge nodes to source these IoT resources from other clients in the vicinity that may contribute them, as shown in the figure below. In a typical connected vehicles scenario, a vehicle’s query about the condition of the road ahead of it is serviced by executing a workload on the nearby edge compute node installed on a traffic light that utilizes the input, i.e., high definition (HD) maps and sensor data offloaded on it by other vehicles in the vicinity.     
+
+![](DocumentationImages/system_overview.jpg)
+
+EDIRO approaches the design and operation of an edge computing infrastructure in a bottom-up fashion as opposed to the typical top-down strategy in the existing approaches which ignores the interactions of the end users with the edge infrastructure and the related context information. This is represented in the below figure which compares EDIRO with the existing IoT edge computing approaches in order to exhibit the benefits EDIRO provides.
+
+![](DocumentationImages/system_architecture_thesis.jpg)
+
+
+## System Architecture
+
+EDIRO is composed of multiple independent modules as shwon in the figure below that function concurrently to perform workload orchestration for client requests and collectively provide its three main functionalities, i.e., resource management, service management and event parsing. EDIRO is designed and implemented as an event-driven architecture. The modules constituting EDIRO listen for events and act in response to deliver their respective functionality. The key events that trigger the system software of EDIRO are the end user interactions at the edge nodes that correspond to either offload of IoT resources or arrival of on-demand client requests. EDIRO is designed to run on a single edge node and facilitate distribued orchestration when multiple edge nodes running an identical instance of EDIRO exists in an interconnected network.
+
+![](DocumentationImages/system_architecture_overview.jpg)
 
 
 ## System requirements for build and execution
